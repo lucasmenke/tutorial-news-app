@@ -1,7 +1,12 @@
-import React from 'react'
+import { categories } from "../constants";
+import fetchNews from "../lib/fetchNews";
 
-export default function HomePage() {
+export default async function HomePage() {
+  //const news: NewsResponse  = await fetchNews(categories.join(","))
+  
   return (
-    <div>HomePage</div>
+    <div>
+      {/* {NewsList news} */}
+    </div>
   )
 }
