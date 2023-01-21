@@ -1,3 +1,4 @@
+import { categories } from "../../../constants";
 import fetchNews from "../../../lib/fetchNews";
 import NewsList from "../../NewsList";
 
@@ -14,4 +15,11 @@ export default async function NewsCategoryPage({ params }: Props) {
       <NewsList news={news} />
     </div>
   );
+}
+
+// prebuild category pages 
+export async function generateStaticParams() {
+    return categories.map(category => ({
+       category: category 
+    }));
 }
