@@ -6,20 +6,20 @@ type Props = {
   params: { category: Category };
 };
 
-export default async function NewsCategoryPage({ params }: Props) {
-  const news: NewsResponse = await fetchNews(params.category);
+export default async function NewsCategoryPage({ params : { category} }: Props) {
+  const news: NewsResponse = await fetchNews(category);
 
   return (
     <div>
-      <h1 className="headerTitle">{params.category}</h1>
+      <h1 className="headerTitle">{category}</h1>
       <NewsList news={news} />
     </div>
   );
 }
 
 // prebuild category pages 
-export async function generateStaticParams() {
-    return categories.map(category => ({
-       category: category 
-    }));
-}
+// export async function generateStaticParams() {
+//     return categories.map(category => ({
+//        category: category 
+//     }));
+// }
