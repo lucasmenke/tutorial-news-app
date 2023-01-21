@@ -4,7 +4,7 @@ type Props = {
   searchParams?: Article;
 };
 
-export default function page({ searchParams }: Props) {
+export default function ArticlePage({ searchParams }: Props) {
   if (
     (searchParams && Object.entries(searchParams).length === 0) ||
     !searchParams
