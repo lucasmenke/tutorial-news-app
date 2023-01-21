@@ -64,8 +64,8 @@ const fetchNews = async (
     }
   );
 
-  console.log(res);
-  console.log("Loading new data from api for category ->", category, keywords);
+  // console.log(res);
+  // console.log("Loading new data from api for category ->", category, keywords);
 
   const newsResponse = await res.json();
 

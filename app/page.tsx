@@ -7,8 +7,6 @@ export default async function HomePage() {
   //const news: NewsResponse = await fetchNews(categories.join(","));
   const news: NewsResponse = response;
 
-  console.log(news);
-
   return (
     <div>
       <NewsList news={news} />
