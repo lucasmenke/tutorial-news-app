@@ -11,7 +11,7 @@ export default function Article({ article }: Props) {
       {article.image && (
         <img
           src={article.image}
-          alt={article.image}
+          alt={article.title}
           className="h-56 w-full object-cover rounded-t-lg shadow-md"
         />
       )}
